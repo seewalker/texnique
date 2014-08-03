@@ -1,0 +1,244 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[margin=3cm]{geometry}
+\usepackage{titlesec}
+\author{Alex Seewald}
+%            type        commands to apply to text  spacing
+\titleformat{\chapter}[hang]{\Huge\center}{}{\smallskip}{}{}
+\titleformat{\section}[hang]{\huge\center}{}{\smallskip}{}{}
+\titleformat{\subsection}[hang]{\Large}{}{\smallskip}{}{}
+\titleformat{\subsubsection}[hang]{\large}{}{\smallskip}{}{}
+\title{Physics / Mathematics Review}
+\begin{document}
+
+\newlength{\lindent}
+\setlength{\lindent}{1.3cm}
+
+\maketitle
+
+\section*{Classical Physics}
+
+    \subsection*{Rotational Motion}
+        \begin{align*}
+             I &= \sum m_i r_i^2 &  K &= \frac{1}{2} I \omega^2 & \tau &= r \times F  & \tau &= I \alpha
+        \end{align*}
+
+    \subsection*{Gravitation}
+        $ F = G \frac{m_1 m_2}{r^2} $
+        \begin{itemize}[leftmargin=\lindent]
+        \item Shell Theorem : A uniform shell of matter exerts no net gravitational
+        force on a particle located inside it.
+        \item Things are heavier on the equator because, in addition to $m a_g$ down, there
+        is also the centripetal force of the earth turning on its axis.
+        \end{itemize}
+
+    \subsection*{Waves}
+        \begin {align*}
+            d \sin(\theta) &= m \lambda & f' &= f \frac{v \pm v_D}{v \pm v_S}
+        \end{align*}
+        \begin{itemize}[leftmargin=\lindent]
+        \item Closed end pipe : standing waves occur when the wave hits the closed end at the middle (so
+        there are an odd number of half periods (wave numbers)).
+        \item Open end pipe : standing waves occur when the wave hits the open ends at the edge (so there
+        are an even number of half periods (wave numbers)).
+        \end{itemize}
+    \subsection*{Heat}
+        \begin {align*}
+        \Delta Q &= cm \Delta T \hspace{2em} \text{where c is specific heat.} &
+        \end{align*}
+        \begin{itemize}[leftmargin=\lindent]
+        \item Two definitions for entropy: $S = \int_i^f \frac{dQ}{T}$, $S = k ln( \frac{N!}{n_1! n_2!} )$
+        \item Ideal Gas Law: $P V = n \kappa T$
+        \item Equipartition Theorem:
+        \end{itemize}
+    \subsection*{E \& M}
+        \begin{align*}
+             V_f - V_i &= - \int_i^f \vec{E} \cdot d\vec{s} & \mathscr{E} &= - \frac{d\Phi_B}{dt}
+        \end{align*}
+        \begin{itemize}[leftmargin=\lindent]
+        \item Like with Gravity's shell theorem, a charged particle inside a shell of uniform charge has no
+        net electrostatic force on it. Also, like with gravity's shell theorem, a charged particle outside
+        the shell is attracted or repelled as if all the charge is at the center.
+        \item Potential due to a point charge: $V = \frac{1}{4 \pi \epsilon_0} \frac{q}{r}$
+        \item The electrical potential energy of a system of fixed point charges is equal to the work
+        that must be done by an external agent to assemble the system, bringing in each charge
+        from an infinite distance.
+        \item An induced current has a direction such that the magnetic field due to the current opposes
+        the change in the magnetic flux that induces the current.
+        \item Definition of inductance for a solenoid with N turns: L = $\frac{N\Phi_B}{i} $
+        \item Self-induced emfs: $\mathscr{E}_L = -L \frac{di}{dt}$
+        \item Impedance is a generalization of resistance that applies to RLC circuits.
+        \item Magnetic Dipole moment (of a coil): $\mu  = N i A \vec{n}$. So, it is normal to the coil's circle.
+              $U = - \mu \cdot B$, $\tau = \mu X B$. where the torque attempts to align B and $\mu$ and the
+              energy of the field is `orientation energy' (potential energy stored in orientation). 
+        \item Electrical Dipole. The `moment' vector, $\vec{p}$ points from the positive to negative point 
+        charge of the dipole. $\vec{\tau} = \vec{p} X \vec{E}$.
+
+        \end{itemize}
+        \subsubsection*{Maxwell's Equations}
+        \begin{enumerate}[leftmargin=\lindent]
+            \item $\oint \vec{B} \cdot \vec{A} = \Phi_B = 0$ : a mathematical statement that no magnetic monopoles exist.
+            \item $\oint \vec{E} \cdot \vec{A} = \frac{q_enc}{\epsilon_0}$
+            \item $\oint \vec{E} \cdot \vec{s} = - \frac{\Phi_B}{dt}$
+            \item $\oint \vec{B} \cdot \vec{s} = \mu_0\epsilon_0 \frac{\Phi_E}{dt} + \mu_0 i_enc$
+        \end{enumerate}
+        What is the electrical flux through? The area enclosed by the current loop.
+        
+    \subsection*{Circuits}
+        $q = C V$ is a property of all capacitors. The definition of a system's capicitance
+        depends on the shape of the capacitor.
+        Conventions: electric field lines point from + to - regions (so from one capacitor plate to another is
+        an example).
+        \subsubsection*{Loop Rules}
+        \begin{enumerate}
+            \item The algebraic sum of the changes in potential encountered in a complete traversal
+            of any loop of a circuit must be zero.
+            \item The sum of the currents entering any junction must be equal to the sum of the currents
+            exiting the junction.
+        \end{enumerate}
+        For capacitors in parallel: $ C_eq = \sum\limits_{i=0}^{n} C_i$
+        For capacitors in series: $ \frac{1}{C_eq} = \sum \frac{1}{C_i}$
+        Energy stored in electric field of a capacitor: $ U = \frac{q^2}{2C}$
+        Energy stored in the magnetic field of an inductor: $U = \frac{L i^2}{2}$
+        Dialetrics, physically manifested by stuff between the capacitor plates, cause any instance of $\epsilon_0$ in an equation
+        to $ \epsilon_0 \kappa $.
+        Definition of Resistance: $ R = \rho \frac{L}{A}$ where $\rho$, resistivity, is a property of the material and L is length.
+        Ohm's law is an approximation that holds well under low-heat conditions.
+        $q_enc = \epsilon_0 \oint \vec{E} \cdot d\vec{A} $ which is a surface integral.
+        \subsubsection*{RC Circuits}
+        Charge builds up on the capacitor exponentially and decays with the 'sawtooth' pattern.
+        \subsubsection*{RL Circuits}
+        When a switch is turned on, rather than the current across R approaching $\frac{\mathscr{E}}{R}$, the
+        an opposing emf $-L \frac{i}{dt}$ is induced. As the current stops increasing, the circuit
+        starts to act like an ordinary R circuit. The current expression involves solving the differential eqn.
+        \subsubsection*{LC Circuits}
+        Whereas RL and RC circuits' current grows and decays exponentially, LC circuits' current varies sinusoidally.
+        Like a block-spring system, there is a notion of driving frequency: $\omega = \frac{1}{LC}$
+        \subsubsection*{RLC Circuits}
+        RLC circuits are like LC circuits but damped. Rather than $\frac{dU}{dt} = 0$, $\frac{dU}{dt} = - i^2 R $
+        \begin{itemize}[leftmargin=\lindent]
+        \item If an external emf is added, damping does not occur. Most AC circuits are RLC.
+        \item Reactance (X) - the factor $V = X I$. Resistive, Capacitave, and Inductive Reactance exist.
+        \item $X_C = \frac{1}{\omega_d C}$
+        \item $X_L = \omega_d L$.
+        \item $Z = \sqrt{R^2 + (X_L - X_C)^2}$. Makes sense because $X_L$ and $- X_C$ are colinear and $R$ is
+        orthogonal to that. 
+        \item $<whatever>_RMS = \frac{<whatver>_max}{\sqrt{2}}$, provied that <whatever> varies sinusoidally.
+        \item Transformers: 
+        \end{itemize}
+
+    \subsection*{Special Relativity}
+        \begin {align*}
+        \gamma &= \frac{1}{\sqrt{1 - (v/c)^2}} & \delta t &= \gamma \delta t_0 & L &= \frac{L_0}{\gamma}
+        E &= \gamma m c^2 &= m c^2 + K & \vec{p} &= \gamma m \vec{v}
+        \end{align*}
+        \begin{itemize}[leftmargin=\lindent]
+        \item Simultinaity is relative.
+        \item When chemical reactions occur, the Q of the reaction is equal to the mass lost times $c^2$.
+
+        \end{itemize}
+    \subsection*{Optics}
+    \begin{itemize}[leftmargin=\lindent]
+        \item Plane mirrors can be thought of as spherical mirrors with an infinitely long radius of curvature.
+        \item For plane mirrors, i = -p.
+        \item In a concave spherical mirror, incidently parallel light rays intersect at a real focus.
+        \item In a convex sphereical mirror, incidently parallel light rays intersect at a virtual focus.
+        \item For a spherical mirror, f = $\frac{r}{2}.$ where r is radius of curvature and f is focal distance.
+              (this assumes that the incident rays are equidistant from radius of curvature).
+        \item $ \frac{1}{p} + \frac{1}{i} = \frac{1}{f}$, so when p = f, the virtual image is infinitely far
+        away. So, when p < f, i is negative. So, when p > f, i is positive. As p approaches infinity, i = f.
+        \item magnification for spherical mirror: $m = - \frac{i}{p}.$
+        \item With mirrors, the real image is on the object's side and with lenses, the virtual image is on
+        the object's side.
+        \item Thin lens formula: $\frac{1}{f} = (n - 1) ( \frac{1}{r_1} - \frac{1}{r_2} )$
+        where $r_1$ is the radius of curvature of the lens half on the object's side and $r_2$ is that on the
+        other side.
+    \end{itemize}
+
+    \subsection*{Fluids}
+        $F_b = m_f g $ where $m_f $is the mass of the fluid displaced.
+
+    \subsection*{Parameters and Constants}
+        \begin{align*}
+             G &= & \mu_0 &=  & e &= 1.602 X 10^-19 C & k &= 1.381 X 10^-23 J / K 
+             \epsilon_0 &= 8.854 X 10^-12 F/m & \mu_0 = 1.257 X 10^-6 H/m & 
+            h &= 6.63 X 10^-34 J \cdot s & 
+        \end{align*}
+
+\section*{Modern}
+    %photoelectric effect.
+    \subsection*{Planck's Constant}
+    For blackbodies, $E = h f$ ($f = v / \lambda $ for waves in general).
+    For light, $E = \frac{hc}{\lambda}$
+    Definition of de Broglie wavelength: $\lambda = \frac{h}{p}$.
+    $\vec{L} = \sqrt{l (l-1)} h$ and $\mu_orb = -\frac{e}{2m} \vec{L}$ (same units as $C/s m^2$).
+    \subsection*{Photoelectric Effect}
+    Metals emit electrons when light shines on them.
+    $ K_max = h (f - f_0)$ where f is the frequency of incident frequency of photon and $f_0$ is the
+    threshhold at and below which no electron is emitted. This threshold is a property of the material.
+    \subsection*{Thompson Scattering}
+
+    \subsection*{Uncertainty Principle}
+    $ \delta x \delta p \geq \frac{h}{2 \pi}$.
+
+    \subsection*{Pauli Exclusion Principle}
+    No two particles may have all the same quantum numbers in the same atom. (applies to fermions, e.g. electrons).
+    This explains why electrons are repulsed from one another and why neutrons can simply clump together.
+    \subsection*{Quantum Numbers}
+    Bosons have integer spin quantum numbers.
+    Fermions have half integer spin quantum numbers.
+    Fermions obey the pauli exclusion principle.
+    Hadrons have the strong force acting on them.
+    Leptons do not have the strong force acting on them.
+    $Mesons ::= bosons \cup hadrons$, $baryons ::= fermions \cup hadrons$.
+    \subsection*{What is the significance?}
+        \begin{itemize}[leftmargin=\lindent]
+            \item Elastic Collisions - In inelastic collisions, heat loss is a big enough factor
+                  that energy is not said to be conserved.
+            \item Degrees of Freedom
+            \item Blackbody Radiation
+            \item Spin (quantum)
+            \item Antiparticles - all reversible quantum numbers are reversed.
+            \item Phasors: A construct that represents a wave. It is a vector of length equal to the
+            maximum magnitude of the wave. It rotates about the origin with an angular speed equal to
+            the angular frequency of the wave. The projection of the rotating phasor onto the vertical
+            axis is equal to the displacement of a point on the wave from the wave's axis of symmetry.
+            Phasors are useful for thinking about how waves add (vector addition laws apply).
+        \end{itemize}
+    \subsection*{Analogies and Connections}
+        \begin{itemize}[leftmargin=\lindent]
+            \item Gauss' Law <=> Surface Integrals.
+            \item Definition of Work <=> Line Integrals.
+            \item Taylor Series <=> Motion with arbitrary rates of change.
+        \end{itemize}
+
+   \subsection*{Open Questions}
+        \begin{description}
+        \item[Physical Correspondence] How is it that capacitors are not like closed switches in a circuit?
+        They do not make a physical connection between the sides of the wire.
+        \end{description}
+
+\section*{Trig Identities}
+    \begin{align*}
+        \sin^2{\theta} + \cos^2{\theta} &= 1                 & 1 + \tan^2{theta} &= \sec^2{theta} \\
+        \sin{u \pm v} &= \sin{u} \cos{v} \pm \cos{u} \sin{v} & \cos{u \pm v} &= \cos{u} \cos{v} \mp \sin{u} \sin{v}
+    \end{align*}
+
+\section*{Unit Identities}
+       Fundamental Units
+       \begin{enumerate}
+       \item meter
+       \item second
+       \item columb
+       \item kilogram
+       \end{enumerate}
+    \begin{align*}
+        c &= \frac{1}{\sqrt{\mu_0 \epsilon_0}}
+        N &= kg \frac{m}{s^2} & J &= kg \frac{m^2}{s^2}
+        E &= N / C & V &= E m
+        T &= \frac{kg}{s C} & Wb &= T m^2 
+    \end{align*}
+
+\end{document}

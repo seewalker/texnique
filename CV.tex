@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\title{CV}
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Maroon}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Maroon} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Alexander Seewald}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{0.5em} % Personal information heading
+
+\NewEntry{email}{\href{mailto:akseewa11@earlham.edu}{akseewa11@earlham.edu}} % Email address
+
+\NewEntry{phone}{(610)-780-1069}
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Goal}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Learn about and do significant work in sciences and technologies along with likeminded people.}\vspace{2em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{August 2011--}{Computer Science Applied Groups-Hardware Interfacing Project}
+
+\Description{\MarginText{Earlham College} The goal of this group is to apply skills in programming and handiness to practical matters at Earlham College. I have installed magnets which monitor the electrical energy consumption of campus buildings and I have configured their associated digital power meters. I have set up a GPS reference clock and configured an ntp daemon to broadcast this accurate time signal to earlham's subnet. I have set up wiki pages that documented our work. \\ Reference: Charles \textsc{Peck}\  \ \href{mailto:charliep@cs.earlham.edu}{charliep@cs.earlham.edu}}
+
+%------------------------------------------------
+
+\NewEntry{Spring 2012--}{Teaching Assistant}
+
+\Description{\MarginText{Earlham College} Worked as a calculus tutor during the spring semester of 2012. This involved helping students, primarily students struggling with the content, with their homework. Worked as an algorithms teaching assistant during the fall semester of 2013. This involved writing and typesetting the solutions to homework problems and grading the students' work. \\ Reference: Beenish \textsc{Chaudhry}\ \href{mailto:chaudbe@earlham.edu}{chaudbe@earlham.edu}}
+
+%------------------------------------------------
+
+\NewEntry{Summer 2010/11}{Farm Hand}
+
+\Description{\MarginText{Rushton Farm} Rushton is a community supported agriculture farm affiliated with the Willistown Conservation Trust. With
+this group, I planted, weeded, and harvested vegetables using manual, low-tech methods.}
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+
+%----------------------------------------------------------------------------------------
+%	Research
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Research}\vspace{1em}
+
+\NewEntry{Summer 2014}{Applying Convolutional Neural Networks To Visual Scene Recognition}
+
+\Description{\MarginText{Indiana University} I trained randomly-initialized neural networks to recognize snow. Snow recognition is an interesting problem because identifying snow involves some combination of picking up on context cues (such as white lumpy trees) and distinguishing between image overexposure and snow. The networks were based off the imagenet topology and implemented in software with the caffe project. The data consisted of 10,000 labeled images, eighty percent of which was used for training and the other twenty for testing. I mapped the parameter space and found that the best models made correct predictions in the low-80\% range. I also ran the snow dataset through the first few layers of a world-class pretrained network, extracted the feature vectors, and trained a support vector machine to do the snow classification based on this input. \\ Faculty Mentor: David Crandall \href{mailto:djcran@indiana.edu}{djcran@indiana.edu} }
+\NewEntry{Summer 2013}{Molecular Dynamic Studies of Z[WC] DNA and the B to Z-DNA Transition}
+
+\Description{\MarginText{Earlham College}The abstract of our paper, "Although DNA is most commonly found in the right-handed B-DNA structure, it is known that biologically active systems also contain left-handed ZII-DNA. We investigate the possibility that Z[WC]-DNA serves as an intermediate structure in the B to ZII transition. Molecular dynamics simulations indicate that Z[WC] nonamers are stable structures with the current AMBER nucleic acid force field. Steered molecular dynamics simulations indicate that, for collective transitions of the whole strand, the B-Z[WC]-ZII pathway may have a lower free-energy barrier than the direct B-ZII pathway. We then used both steered and targeted molecular dynamics in combination with umbrella sampling to produce potentials of mean force for the B to ZII transition along both pathways.".\\ Peers: Jinhee Kim, Hoang Tran Project Leader: Michael Lerner \href{mailto:mglerner@gmail.com}{mglerner@gmail.com} }
+
+
+%------------------------------------------------
+
+\vspace{1em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{1em}
+
+\NewEntry{2011}{West Chester East High School}
+
+\Description{\MarginText{Diploma}GPA: 4.6\ \ $\cdotp$\ \ Class Rank: 10 of 375\newline }
+
+%------------------------------------------------
+
+\NewEntry{2015}{Earlham College}
+
+\Description{\MarginText{B.A (expected)}GPA: 3.68\ \ $\cdotp$\ \ \textit{Computer Science major, Physics Minor}}
+
+\begin{center} \textbf{Relevant Courses} \end{center}
+
+\hspace*{-1.8in}
+\begin{tabular}{| l | l | p{11cm} |}
+Course & Grade & Synopsis \\
+\hline
+Algorithms \& Data Structures & A+ & \parbox{11cm}{Studied methods of searching and sorting with a mathematical perspective on time complexity.} \\
+\hline
+Artificial Intelligence & A & \parbox{11cm}{Studied classical artificial intelligence theory. Wrote pacman agents which use minimax, reflex agent, and graph search methods.} \\
+\hline
+Discrete Mathematics & A- & \parbox{11cm}{Learned about and practiced methods of proof. Studied the highlights of a wide breadth of topics such as combinatorics, number theory, and set theory.} \\
+\hline
+Operating Systems & A & \parbox{11cm}{Studied the abstractions and operations provided by the OS, e.g. virtual memory, semaphores, sockets, with an attention to Linux. Wrote a rudimentary shell and server.} \\
+\hline
+Programming Languages & A & \parbox{11cm}{Built simple programming language interpreters with the eopl parser generator. These translated strings of source code into scheme s-expressions that my interpreter would evaluate according to rules of the language, e.g. lexical scoping or dynamic scoping.}\\
+\hline
+Principles of Computer Organization & A & \parbox{11cm}{Studied modern computer hardware, did some circuitry and software performance-profiling labs.} \\
+\hline
+\end{tabular}
+\end{cv}
+
+\end{document}
