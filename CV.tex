@@ -14,10 +14,6 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \title{CV}
 
 \documentclass{scrartcl}
@@ -71,15 +67,19 @@
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{August 2011--}{Computer Science Applied Groups-Hardware Interfacing Project}
+\NewEntry{Fall 2014--}{Computer Science Applied Groups-Cluster Computer Administrator}
 
-\Description{\MarginText{Earlham College} The goal of this group is to apply skills in programming and handiness to practical matters at Earlham College. I have installed magnets which monitor the electrical energy consumption of campus buildings and I have configured their associated digital power meters. I have set up a GPS reference clock and configured an ntp daemon to broadcast this accurate time signal to earlham's subnet. I have set up wiki pages that documented our work. \\ Reference: Charles \textsc{Peck}\  \ \href{mailto:charliep@cs.earlham.edu}{charliep@cs.earlham.edu}}
+\Description{\MarginText{Earlham College} The goal of this group is to maintain and improve the computational service Earlham provides to researchers in the natural sciences. I have set up shell environments to use environment modules, replaced ethernet links between cluster nodes with infiniband, and tuned BLASes.\\ Reference: Charles \textsc{Peck}\  \ \href{mailto:charliep@cs.earlham.edu}{charliep@cs.earlham.edu}}
+
+\NewEntry{Spring 2012-Spring 2014}{Computer Science Applied Groups-Hardware Interfacing Project}
+
+\Description{\MarginText{Earlham College} The goal of this group is to apply skills in programming and handiness to practical matters at Earlham College. One my long term projects was installing magnets which monitor the electrical energy consumption of campus buildings, writing software to poll those magnets, normalizing the energy data by considerations like building envelope, and displaying the data in a chart online. I have also done miscellanous tasks like setting up a GPS reference clock and configuring an ntp daemon to broadcast this accurate time signal to earlham's subnet. \\ Reference: Charles \textsc{Peck}\  \ \href{mailto:charliep@cs.earlham.edu}{charliep@cs.earlham.edu}}
 
 %------------------------------------------------
 
 \NewEntry{Spring 2012--}{Teaching Assistant}
 
-\Description{\MarginText{Earlham College} Worked as a calculus tutor during the spring semester of 2012. This involved helping students, primarily students struggling with the content, with their homework. Worked as an algorithms teaching assistant during the fall semester of 2013. This involved writing and typesetting the solutions to homework problems and grading the students' work. \\ Reference: Beenish \textsc{Chaudhry}\ \href{mailto:chaudbe@earlham.edu}{chaudbe@earlham.edu}}
+\Description{\MarginText{Earlham College} Worked as a calculus tutor during the spring semester of 2012. This involved helping students, primarily students struggling with the content, with their homework. Worked as an algorithms teaching assistant during the fall semester of 2013. This involved writing and typesetting the solutions to homework problems and grading the students' work. Worked as a TA for algorithms again in fall 2014.\\ Reference: Xunfei \textsc{Jiang}\ \href{mailto:jiangxu@earlham.edu}{jiangxu@earlham.edu}}
 
 %------------------------------------------------
 
@@ -99,17 +99,30 @@ this group, I planted, weeded, and harvested vegetables using manual, low-tech m
 
 \spacedlowsmallcaps{Research}\vspace{1em}
 
-\NewEntry{Summer 2014}{Applying Convolutional Neural Networks To Visual Scene Recognition}
 
-\Description{\MarginText{Indiana University} I trained randomly-initialized neural networks to recognize snow. Snow recognition is an interesting problem because identifying snow involves some combination of picking up on context cues (such as white lumpy trees) and distinguishing between image overexposure and snow. The networks were based off the imagenet topology and implemented in software with the caffe project. The data consisted of 10,000 labeled images, eighty percent of which was used for training and the other twenty for testing. I mapped the parameter space and found that the best models made correct predictions in the low-80\% range. I also ran the snow dataset through the first few layers of a world-class pretrained network, extracted the feature vectors, and trained a support vector machine to do the snow classification based on this input. \\ Faculty Mentor: David Crandall \href{mailto:djcran@indiana.edu}{djcran@indiana.edu} }
+\NewEntry{Summer 2014}{A Computer Vision Experiment (as a senior project)}
+
+\Description{\MarginText{Earlham College} The abstract of my paper, "While image quality analysis is a well-researched topic within computer vision, its domain is broad enough that its methods do not instantly answer high-level inqueries about images such as ’is this a thoughtful, skilled photograph?’. Rather, the question needs to be decomposed into sub questions. Four workable sub questions are, ’What do traditional image quality assessments say?’, ’Does the image have an abundance of texture?’, ’Does the image have regions of diverse noisiness levels?’, and ’Are the most noticable features located in classically good or cliche ́ arrangements?’. Each of those questions can be answered quantitatively and answers reduced into a single prediction. Convolutional Neural Networks are similarly able to make predictions over a label space, but their knowledge is trained rather than built-in. By comparing the accuracy of each method, the validity of those four questions as a model of good photography can be evaluated. By varying the weight of each sub-question’s contributions and keeping track of the proportion of error, the predictive power of each sub-question can also be determined.". Read the full paper and browse the related code at \href{https://github.com/seewalker/vision}{github.com/seewalker/vision}. \\Reference: Charles \textsc{Peck}\  \ \href{mailto:charliep@cs.earlham.edu}{charliep@cs.earlham.edu}}
+
+\NewEntry{Summer 2014}{Applying Convolutional Neural Networks To Visual Scene Recognition (as an NSF funded REU)}
+
+\Description{\MarginText{Indiana University} I trained Convolutional Neural Networks (CNNs) to recognize snow. CNNs are particularly well-suited for snow recognition because the visual similarity between image overexposure and snow means that the scene-level, abstract features provided by deep learning are useful. The networks were based off the Krizhevsky architecture and implemented in software with the caffe project. I wrote code that mapped the training procedure's parameter space and found that the best models made correct predictions in the low-80\% range. I compared the predictive power of the deep CNN with a shallower CNN that passes off its feature vectors to a support vector machine. \\ Faculty Mentor: David Crandall \href{mailto:djcran@indiana.edu}{djcran@indiana.edu} }
+
 \NewEntry{Summer 2013}{Molecular Dynamic Studies of Z[WC] DNA and the B to Z-DNA Transition}
 
-\Description{\MarginText{Earlham College}The abstract of our paper, "Although DNA is most commonly found in the right-handed B-DNA structure, it is known that biologically active systems also contain left-handed ZII-DNA. We investigate the possibility that Z[WC]-DNA serves as an intermediate structure in the B to ZII transition. Molecular dynamics simulations indicate that Z[WC] nonamers are stable structures with the current AMBER nucleic acid force field. Steered molecular dynamics simulations indicate that, for collective transitions of the whole strand, the B-Z[WC]-ZII pathway may have a lower free-energy barrier than the direct B-ZII pathway. We then used both steered and targeted molecular dynamics in combination with umbrella sampling to produce potentials of mean force for the B to ZII transition along both pathways.".\\ Peers: Jinhee Kim, Hoang Tran Project Leader: Michael Lerner \href{mailto:mglerner@gmail.com}{mglerner@gmail.com} }
+\Description{\MarginText{Earlham College} I worked with Michael Lerner at Earlham College on investigating the energetic favorability of Z[WC] DNA as an intermediate stage in the B-DNA to ZII-DNA pathway. My specific responsibility was identifying dihedral angles that are characteristic of Z[WC] DNA and then doing a Steered Molecular Dynamics simulation where energy minima were imposed at a range of angles that led B-DNA to change conformation into Z[WC] DNA. \\ Peers: Jinhee Kim, Hoang Tran Project Leader: Michael Lerner \href{mailto:mglerner@gmail.com}{mglerner@gmail.com} }
 
 
 %------------------------------------------------
 
 \vspace{1em} % Extra space between major sections
+
+\spacedlowsmallcaps{Presentation of Research}\vspace{1em}
+
+\NewEntry{February 2014}{Molecular Dynamic Studies of Z[WC] DNA and the B to Z-DNA Transition}
+
+\Description{\MarginText{58th Annual Meeting of Biophysical Society}The abstract of our paper, "Although DNA is most commonly found in the right-handed B-DNA structure, it is known that biologically active systems also contain left-handed ZII-DNA. We investigate the possibility that Z[WC]-DNA serves as an intermediate structure in the B to ZII transition. Molecular dynamics simulations indicate that Z[WC] nonamers are stable structures with the current AMBER nucleic acid force field. Steered molecular dynamics simulations indicate that, for collective transitions of the whole strand, the B-Z[WC]-ZII pathway may have a lower free-energy barrier than the direct B-ZII pathway. We then used both steered and targeted molecular dynamics in combination with umbrella sampling to produce potentials of mean force for the B to ZII transition along both pathways.".\\ Peers: Jinhee Kim, Hoang Tran. Project Leader: Michael Lerner \href{mailto:mglerner@gmail.com}{mglerner@gmail.com} }
+
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
@@ -117,35 +130,26 @@ this group, I planted, weeded, and harvested vegetables using manual, low-tech m
 
 \spacedlowsmallcaps{Education}\vspace{1em}
 
+\NewEntry{2015}{Earlham College}
+
+\Description{\MarginText{B.A (expected)}GPA: 3.63\ \ $\cdotp$\ \ \textit{Computer Science major, Physics Minor}}
+
+
 \NewEntry{2011}{West Chester East High School}
 
 \Description{\MarginText{Diploma}GPA: 4.6\ \ $\cdotp$\ \ Class Rank: 10 of 375\newline }
 
 %------------------------------------------------
 
-\NewEntry{2015}{Earlham College}
+\vspace{1em} % Extra space between major sections
 
-\Description{\MarginText{B.A (expected)}GPA: 3.68\ \ $\cdotp$\ \ \textit{Computer Science major, Physics Minor}}
+\spacedlowsmallcaps{Miscellaneous Creative Works}\vspace{1em}
 
-\begin{center} \textbf{Relevant Courses} \end{center}
+\begin{itemize}
+\item \href{https://www.github.com/seewalker}{github account}
+\item \href{https://www.flickr.com/photos/alphabettownsman/}{flickr account}
+\end{itemize}
 
-\hspace*{-1.8in}
-\begin{tabular}{| l | l | p{11cm} |}
-Course & Grade & Synopsis \\
-\hline
-Algorithms \& Data Structures & A+ & \parbox{11cm}{Studied methods of searching and sorting with a mathematical perspective on time complexity.} \\
-\hline
-Artificial Intelligence & A & \parbox{11cm}{Studied classical artificial intelligence theory. Wrote pacman agents which use minimax, reflex agent, and graph search methods.} \\
-\hline
-Discrete Mathematics & A- & \parbox{11cm}{Learned about and practiced methods of proof. Studied the highlights of a wide breadth of topics such as combinatorics, number theory, and set theory.} \\
-\hline
-Operating Systems & A & \parbox{11cm}{Studied the abstractions and operations provided by the OS, e.g. virtual memory, semaphores, sockets, with an attention to Linux. Wrote a rudimentary shell and server.} \\
-\hline
-Programming Languages & A & \parbox{11cm}{Built simple programming language interpreters with the eopl parser generator. These translated strings of source code into scheme s-expressions that my interpreter would evaluate according to rules of the language, e.g. lexical scoping or dynamic scoping.}\\
-\hline
-Principles of Computer Organization & A & \parbox{11cm}{Studied modern computer hardware, did some circuitry and software performance-profiling labs.} \\
-\hline
-\end{tabular}
 \end{cv}
 
 \end{document}
